@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+/* ================= NAVBAR ================= */
+header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #888;
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 2px;
+  transition: border-bottom all 0.2s ease-in-out;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #1cb5fc;  
+}
+
+.username span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1cb5fc;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background-color: #e9f8ff;
+  cursor: pointer;
+}
