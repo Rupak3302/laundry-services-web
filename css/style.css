@@ -150,7 +150,7 @@ header {
   max-width: 100%;
   height: 100%;
   padding: 80px 20px;
-  background-color: #e0e0e0cc;
+  background-color: #f3f4f6;
 }
 
 .booking-wrapper {
@@ -163,7 +163,7 @@ header {
 /* LEFT */
 .services-box {
   min-width: 700px;
-  width: 70%;
+  width: 65%;
   background: #ffffff;
   padding: 15px 25px;
   border-radius: 18px;
@@ -264,6 +264,7 @@ button {
 
 .cart-box {
   min-width: 400px;
+  width: 100%;
   height: 60%;
   background: #ffffff;
   border-radius: 18px;
@@ -271,14 +272,13 @@ button {
 
 .cart-box h2 {
   font-size: 20px;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
 }
 
 .cart-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 10px 0;
   background-color: #e6ecf1;
 }
 
@@ -303,11 +303,34 @@ button {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.empty-cart {
+  text-align: center;
+  padding: 35px 30px;
+}
+
+.empty-cart i {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-cart h4 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.empty-cart p {
+  color: #666;
+  font-size: 14px;
+}
+
+
 .total-amount {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  padding: 10px;
+  padding: 15px 40px 15px 20px;
   border-top: 2px solid #e0e0e0;
   
 }
@@ -349,7 +372,7 @@ button {
   gap: 10px;
 }
 
-.book-btn{
+.book-btn {
   width: 100%;
   padding: 14px;
   background-color: #6366f1;
@@ -357,9 +380,39 @@ button {
   border: none;
   border-radius: 12px;
   font-size: 15px;
-  cursor: pointer;
-  margin-top: 10px;
+  cursor: not-allowed;
 }
+
+.booking-form.disabled-state input {
+  pointer-events: none;
+  background-color: #ffffff;
+  cursor: allowed;
+  opacity: 0.6;
+}
+
+.booking-form.disabled-state .book-btn {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.book-warning {
+  display: none;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #dc2626;
+  align-items: center;
+  
+}
+
+.booking-form.disabled-state:focus-within .book-warning {
+  display: flex;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #dc2626;
+  align-items: center;
+}
+
 
 .success-msg {
   margin-top: 12px;

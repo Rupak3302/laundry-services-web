@@ -227,6 +227,11 @@
                         <!-- Added dynamically -->
                         </tbody>
                     </table>
+                    <div class="empty-cart">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h4>No Items Added</h4>
+                        <p>Add items to the cart from the services bar</p>
+                    </div>
 
                     <div class="total-amount">
                         <span>Total Amount</span>
@@ -237,7 +242,7 @@
                 
                 <div class="form-box">
 
-                    <div class="booking-form">
+                    <div class="booking-form disabled-state">
                         <h3>Book Now</h3>
                     
                         <div class="form-group">
@@ -258,8 +263,14 @@
                         </div>
 
                         <button class="book-btn">Book now</button>
+
+                        <p class="book-warning">
+                          <i class="fa-solid fa-circle-info"></i>
+                          Add the items to the cart to book
+                        </p>                       
                         
                         <p class="success-msg" style="display:none;">
+                            <i class="fa-solid fa-circle-info"></i>
                             Email Has been sent successfully
                         </p>
                     </div>
