@@ -111,38 +111,38 @@ header {
 }
 /* ========== ACHIEVEMENTS ========== */
 .achievement-section {
+  max-width: 100%;
   display: flex;
   align-items: center;
   background-color: #1da0dd;
   padding: 40px 20px;;
-  text-align: center;
+
 }
 
 .achievement-title {
+  width: 40%;
   margin: 0 40px;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .achievement-container {
   max-width: 100%;
   margin: auto;
   display: flex;
-  text-align: center;
-  justify-content: space-between;
   gap: 40px;
 }
 
 .achievement h3 {
   display: flex;
   color: #333;
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 5px;
   
 }
 
 .achievement p {
   color: #333;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 /* ========== BOOKING SECTION ========== */
@@ -192,13 +192,20 @@ header {
   color: #000000;
 }
 
+.service-icon {
+  margin: 0 10px;
+  color: #6366f1;
+  font-size: 18px;
+  min-width: 30px;
+}
+
 .service-info {
   display: flex;
-  gap: 20px;
   align-items: center;
 }
 
 .service-price {
+  margin-left: 20px;
   color: #6366f1;
   font-weight: 600;
 }
@@ -218,7 +225,7 @@ button {
 
 .add-btn {
   background: #e6ecf1;
-  padding: 10px 27px;
+  padding: 10px 26px;
 }
 
 .remove-btn {
@@ -226,6 +233,15 @@ button {
   background: #f3d0d0b7;
   padding: 10px 14px;
   
+}
+
+.services-footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .services-footer {
@@ -375,36 +391,52 @@ button {
   color: #666;
   line-height: 1.6;
 }
+
+.quality-item i {
+  font-size: 50px;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
 /* ========== NEWSLETTER ========== */
 .newsletter-section {
   max-width: 100%;
-  background-color: #3b82f6;
+  background-color: #1da0dd;
   padding: 80px 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-.newsletter-section h2 {
+.newsletter-title {
+  width: 40%;
   color: #ffffff;
-  font-size: 26px;
-  margin-right: 20px;
+  font-size: 40px;
+  margin: 0 40px;
 }
 
-.newsletter-section input {
-  padding: 10px;
+.newsletter-input input{
+  font-size: 20px;
   border: none;
-  border-radius: 6px;
+  padding: 15px;
+  margin: 0 10px 14px 0;
+  background-color: #3fabdd;
 }
 
-.newsletter-section button {
-  padding: 10px 18px;
-  background: #ffffff;
+input::placeholder {
+  font-size: 18px;
+  color: #e0e0e0cc;
+}
+
+.subscribe-btn {
+  font-size: 20px;
   border: none;
-  border-radius: 6px;
+  padding: 15px 92px;
+  border-radius: 0px;
+  background-color: #ffffff;
+  color: #1da0dd;
   cursor: pointer;
 }
+
 /* ========== FOOTER ========== */
 .footer-section {
   background-color: #e0e0e0cc;
@@ -420,7 +452,7 @@ button {
 }
 
 .footer-col h3 {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 30px;
 }
 
@@ -444,4 +476,16 @@ button {
   display: inline-block;
   margin-right: 10px;
   font-size: 14px;
+
+}
+
+.social-icons i {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #1da0dd;
 }
