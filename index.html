@@ -48,7 +48,7 @@
         </div>
     
         <div class="hero-right">
-            <img src="images/placeholder.txt" alt="Laundry Service">
+            <img src="images/heroImage.png" alt="Laundry Service">
         </div>
     </section>
 
@@ -96,8 +96,7 @@
                         <span class="service-name">Dry Cleaning</span>
                         <span class="service-price">₹200.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div class="service-buttons">
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -108,8 +107,7 @@
                         <span class="service-name">Wash & Fold</span>
                         <span class="service-price">₹100.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div>
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -120,8 +118,7 @@
                         <span class="service-name">Ironing</span>
                         <span class="service-price">₹30.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div>
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -132,8 +129,7 @@
                         <span class="service-name">Stain Removal</span>
                         <span class="service-price">₹500.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div>
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -144,8 +140,7 @@
                         <span class="service-name">Leather & Suede Cleaning</span>
                         <span class="service-price">₹999.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div>
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -156,8 +151,7 @@
                         <span class="service-name">Wedding Dress Cleaning</span>
                         <span class="service-price">₹2800.00</span>
                     </div>
-    
-                    <div class="service-actions">
+                    <div>
                         <button class="add-btn">Add Item</button>
                         <button class="remove-btn" style="display:none;">Remove Item</button>
                     </div>
@@ -166,57 +160,66 @@
                 <p class="services-footer">
                     Add the items to the cart and book now
                 </p>
-    
+            
             </div>
     
             <!-- ========== RIGHT : CART + FORM ========== -->
-            <div class="cart-box">
-    
-                <h3>Added Items</h3>
-    
-                <table class="cart-table">
-                    <thead>
-                        <tr>
-                            <th>S.No</th>
-                            <th>Service Name</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <div class="cart-form-box">
+
+                <div class="cart-box">
+                
+                    <h2>Added Items</h2>
+
+
+                    <table class="cart-table">
+                        <thead>
+                            <tr class="table-row">
+                                <th class="table-sNo">S.No</th>
+                                <th>Service Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <!-- Added dynamically -->
-                    </tbody>
-                </table>
-    
-                <div class="total-amount">
-                    <span>Total Amount</span>
-                    <span id="totalAmount">₹0.00</span>
-                </div>
-    
-                <div class="booking-form">
-                    <h3>Book Now</h3>
-    
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Jone Doe" required />
+                        </tbody>
+                    </table>
+
+                    <div class="total-amount">
+                        <span>Total Amount</span>
+                        <span id="totalAmount">₹0.00</span>
                     </div>
-    
-                    <div class="form-row">
+
+                </div>    
+                
+                <div class="form-box">
+
+                    <div class="booking-form">
+                        <h3>Book Now</h3>
+                    
                         <div class="form-group">
-                            <label>Email ID</label>
-                            <input type="email" placeholder="mailid123@gmail.com" required />
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Jone Doe" required />
                         </div>
-    
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="0000000000" required />
+                    
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email ID</label>
+                                <input type="email" placeholder="mailid123@gmail.com" required />
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="0000000000" required />
+                            </div>
                         </div>
+
+                        <button class="book-btn">Book now</button>
+                        
+                        <p class="success-msg" style="display:none;">
+                            Email Has been sent successfully
+                        </p>
                     </div>
-    
-                    <button class="book-btn">Book now</button>
-    
-                    <p class="success-msg" style="display:none;">
-                        Email Has been sent successfully!
-                    </p>
+                    
                 </div>
     
             </div>
@@ -260,7 +263,7 @@
 
      <!-- ================= NEWSLETTER SUBSCRIPTION SECTION ================= -->
 
-    <section class="newslwtter-section">
+    <section class="newsletter-section">
     
         <h2>Subscribe to our newsletter.</h2>
     
@@ -278,7 +281,7 @@
         <div class="footer-container">
     
             <div class="footer-col">
-                <h2>Logo</h2>
+                <h3>Logo</h3>
     
                 <h4>About Us</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
