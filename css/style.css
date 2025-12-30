@@ -95,12 +95,17 @@ header {
 .hero-left button {
   padding: 20px 50px;
   background-color: #1da0dd;
-  color: #ffffff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 18px;
 }
+
+.hero-left button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .hero-right {
   flex: 1;
 }
@@ -373,6 +378,11 @@ button {
 
 }
 
+.form-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
 .form-row {
   display: flex;
   gap: 10px;
@@ -486,8 +496,12 @@ button {
   background-color: #3fabdd;
 }
 
+.newsletter-input input:focus {
+  outline-color: #3fabdd;
+}
+
 input::placeholder {
-  font-size: 18px;
+  font-size: 20px;
   color: #e0e0e0cc;
 }
 
@@ -505,6 +519,7 @@ input::placeholder {
 .footer-section {
   background-color: #e0e0e0cc;
   padding: 80px 20px 40px 20px;
+  color: #555;
 }
 
 .footer-container {
@@ -529,11 +544,14 @@ input::placeholder {
   
 }
 
+.footer-col ul li a {
+  text-decoration: none;
+  color: #555;
+}
+
 .footer-col ul li {
   margin-bottom: 6px;
   font-size: 14px;
-  color: #555;
-  cursor: pointer;
 }
 
 .social-icons span {

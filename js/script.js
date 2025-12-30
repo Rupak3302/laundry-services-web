@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.querySelector(".booking-form");
   const bookBtn = document.getElementById("bookBtn");
   const successMsg = document.getElementById("successMsg");
-    const bookWarning = document.getElementById("bookWarning");
+  const bookWarning = document.getElementById("bookWarning");
 
   const nameInput = document.getElementById("fullName");
   const emailInput = document.getElementById("email");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-    // ================= WARNING ON INPUT CLICK =================
+  /* ================= WARNING ON INPUT FOCUS ================= */
   [nameInput, emailInput, phoneInput].forEach(input => {
     input.addEventListener("focus", () => {
       if (cartItems.length === 0) {
@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
-  // ================= ADD ITEM =================
+  /* ================= ADD ITEM ================= */
   addBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       const serviceItem = btn.closest(".service-item");
       const name = serviceItem.querySelector(".service-name").textContent;
-      const priceText = serviceItem.querySelector(".service-price").textContent;
-      const price = parseInt(priceText.replace("₹", ""));
+      const price = parseInt(
+        serviceItem.querySelector(".service-price").textContent.replace("₹", "")
+      );
 
       if (cartItems.find(item => item.name === name)) return;
 
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       updateTotal();
 
       const row = document.createElement("tr");
-      row.setAttribute("data-name", name);
+      row.dataset.name = name;
       row.innerHTML = `
         <td>${cartItems.length}</td>
         <td>${name}</td>
@@ -81,13 +81,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ================= REMOVE ITEM =================
+  /* ================= REMOVE ITEM ================= */
   removeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       const serviceItem = btn.closest(".service-item");
       const name = serviceItem.querySelector(".service-name").textContent;
-      const priceText = serviceItem.querySelector(".service-price").textContent;
-      const price = parseInt(priceText.replace("₹", ""));
+      const price = parseInt(
+        serviceItem.querySelector(".service-price").textContent.replace("₹", "")
+      );
 
       cartItems = cartItems.filter(item => item.name !== name);
       totalAmount -= price;
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ================= BOOK NOW =================
+  /* ================= BOOK NOW ================= */
   bookBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -122,36 +123,50 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Show success message
-    successMsg.style.display = "flex";
+    const servicesList = cartItems
+      .map(item => `• ${item.name} - ₹${item.price}`)
+      .join("\n");
 
-    // Hide success message after 3 seconds
-    setTimeout(() => {
-      successMsg.style.display = "none";
-    }, 5000);
+    emailjs.send(
+      "service_ho10t1a",
+      "template_lo5o89u",
+      {
+        user_name: nameInput.value,
+        user_email: emailInput.value,
+        user_phone: phoneInput.value,
+        services_list: servicesList,
+        total_amount: `₹${totalAmount}`
+      }
+    )
+    .then(() => {
+      successMsg.style.display = "flex";
 
-    // Reset cart
-    cartItems = [];
-    totalAmount = 0;
-    updateTotal();
-    cartBody.innerHTML = "";
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 5000);
 
-    // Reset buttons
-    addBtns.forEach(btn => (btn.style.display = "inline-block"));
-    removeBtns.forEach(btn => (btn.style.display = "none"));
+      cartItems = [];
+      totalAmount = 0;
+      cartBody.innerHTML = "";
+      updateTotal();
 
-    // Clear inputs
-    nameInput.value = "";
-    emailInput.value = "";
-    phoneInput.value = "";
+      addBtns.forEach(btn => btn.style.display = "inline-block");
+      removeBtns.forEach(btn => btn.style.display = "none");
 
-    updateCartState();
+      nameInput.value = "";
+      emailInput.value = "";
+      phoneInput.value = "";
+
+      updateCartState();
+    })
+    .catch(error => {
+      console.error("EmailJS Error:", error);
+      alert("Email failed. Check EmailJS template variables.");
+    });
   });
 
-  // ================= INITIAL =================
+  /* ================= INITIAL ================= */
   updateTotal();
   updateCartState();
 
 });
-
-
