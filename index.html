@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Services Web App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Service Web App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
+
 <body>
-    <!-- ================= HEADER / NAVBAR ================= -->
+    <!-- HEADER / NAVBAR -->
     <header>
         <nav class="navbar">
-    
+
             <div class="logo">
                 <h2>Logo</h2>
             </div>
-    
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -29,48 +30,46 @@
         </nav>
     </header>
 
-     <!-- ================= HERO SECTION ================= -->
-
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
-    
+
         <div class="hero-left">
             <h1>
                 Revitalize Your Clothes with Expert
                 <span>Laundry Services!</span>
             </h1>
-    
+
             <p>
                 From premium dry cleaning to swift wash and fold,
                 we deliver care and convenience. Schedule a pickup and
                 rediscover the freshness of your clothes today!
             </p>
-            
-            <button><a href="#services">Book a service today!</a></button>
-            
+
+            <button><i class="fa-regular fa-calendar"></i><a href="#services">Book a service today!</a></button>
+
         </div>
-    
+
         <div class="hero-right">
             <img src="images/heroImage.png" alt="Laundry Service">
         </div>
     </section>
 
-     <!-- ================= SERVICE OVERVIEW SECTION ================= -->
-
+    <!-- SERVICE OVERVIEW SECTION -->
     <section class="achievement-section">
-    
+
         <h2 class="achievement-title">Our Achievements</h2>
-    
+
         <div class="achievement-container">
             <div class="achievement">
                 <h3>15+</h3>
                 <p>Laundry Services</p>
             </div>
-    
+
             <div class="achievement">
                 <h3>240+</h3>
                 <p>Happy Customers</p>
             </div>
-    
+
             <div class="achievement">
                 <h3>2+ Yrs</h3>
                 <p>Yrs Experience</p>
@@ -78,217 +77,98 @@
         </div>
     </section>
 
-     <!-- ================= BOOKING SERVICES SECTION ================= -->
-
+    <!-- BOOKING SERVICES SECTION -->
     <section id="services" class="booking-section">
     
         <div class="booking-wrapper">
-    
-            <!-- ========== LEFT : OUR SERVICES ========== -->
+
+            <!-- LEFT : OUR SERVICES -->
             <div class="services-box">
-    
+
                 <h2>Our Services</h2>
                 <p class="services-desc">
-                    Click On The Add To Cart Button To Add The Services To Your Cart
+                  Click On The Add To Cart Button To Add The Services To Your Cart
                 </p>
-    
-                <!-- Service Item -->
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-shirt service-icon"></i>
-                        <span class="service-name">Dry Cleaning</span>
-                        <span class="service-price">₹200.00</span>
-                    </div>
-                    <div class="service-buttons">
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
+              
+                <div id="js-services-list">
+                  <!--  -->
                 </div>
-    
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-basket-shopping service-icon"></i>
-                        <span class="service-name">Wash & Fold</span>
-                        <span class="service-price">₹100.00</span>
-                    </div>
-                    <div>
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-temperature-high service-icon"></i>
-                        <span class="service-name">Ironing</span>
-                        <span class="service-price">₹30.00</span>
-                    </div>
-                    <div>
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-spray-can-sparkles service-icon"></i>
-                        <span class="service-name">Stain Removal</span>
-                        <span class="service-price">₹500.00</span>
-                    </div>
-                    <div>
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-hat-cowboy service-icon"></i>
-                        <span class="service-name">Leather & Suede Cleaning</span>
-                        <span class="service-price">₹999.00</span>
-                    </div>
-                    <div>
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="service-item">
-                    <div class="service-info">
-                        <i class="fa-solid fa-person-dress service-icon"></i>
-                        <span class="service-name">Wedding Dress Cleaning</span>
-                        <span class="service-price">₹2800.00</span>
-                    </div>
-                    <div>
-                        <button class="add-btn">
-                            Add Item
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                        <button class="remove-btn" style="display:none;">
-                            Remove Item
-                            <i class="fa-solid fa-circle-minus"></i>
-                        </button>
-                    </div>
-                </div>
-    
+              
                 <p class="services-footer">
-                    <i class="fa-solid fa-circle-info"></i>
-                    Add the items to the cart and book now
+                  <i class="fa-solid fa-circle-info"></i>
+                  Add the items to the cart and book now
                 </p>
-            
             </div>
-    
+          
             <!-- ========== RIGHT : CART + FORM ========== -->
             <div class="cart-form-box">
 
                 <div class="cart-box">
-                
                     <h2>Added Items</h2>
 
+                    <div class="cart-header">
+                      <span class="sNo">S.No</span>
+                      <span class="sName">Service Name</span>
+                      <span class="sPrice">Price</span>
+                    </div>
+                  
                     <div class="cart-content">
-                        <table class="cart-table">
-                            <thead>
-                                <tr class="table-row">
-                                    <th class="table-sNo">S.No</th>
-                                    <th>Service Name</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <!-- Added dynamically -->
-                            </tbody>
-                        </table>
-                        <div class="empty-cart">
-                            <i class="fa-solid fa-circle-info"></i>
-                            <h4>No Items Added</h4>
-                            <p>Add items to the cart from the services bar</p>
+                        <div id="js-empty-cart" class="empty-cart">
+                            <!--  -->
+                        </div>
+                      
+                        <div class ="total-amount">
+                          <span>Total Amount</span>
+                          <span class="total-price" id="js-total-price">₹0</span>
                         </div>
                     </div>
+                </div>
+              
+              
+                <div class="booking-form-container">
+                  <h3>Book Now</h3>
 
-                    <div class="total-amount">
-                        <span>Total Amount</span>
-                        <span id="totalAmount">₹0.00</span>
-                    </div>
-
-                </div>    
-                
-                <div class="form-box">
-
-                    <form class="booking-form disabled-state" id="bookingForm">
-                        <h3>Book Now</h3>
+                  <form id="js-booking-form">
                     
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" id="fullName" placeholder="Jone Doe" required />
-                        </div>
+                      <div class="form-group">
+                          <label>Full Name</label>
+                          <input type="text" id="fullName" placeholder="Jone Doe" required />
+                      </div>
                     
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Email ID</label>
-                                <input type="email" id="email" placeholder="mailid123@gmail.com" required />
-                            </div>
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label>Email ID</label>
+                              <input type="email" id="email" placeholder="mailid123@gmail.com" required />
+                          </div>
                         
-                            <div class="form-group">
+                          <div class="form-group">
                                 <label>Phone Number</label>
                                 <input type="tel" id="phone" placeholder="0000000000" required />
-                            </div>
-                        </div>
-
-                        <button class="book-btn" id="bookBtn">Book now</button>
-
-                        <p class="book-warning" id="bookWarning">
-                          <i class="fa-solid fa-circle-info"></i>
-                          Add the items to the cart to book
-                        </p>                       
-                        
-                        <p class="success-msg" id="successMsg">
-                            <i class="fa-solid fa-circle-info"></i>
-                            Email Has been sent successfully
-                        </p>
-                    </form>
+                          </div>
+                      </div>
                     
+                      <button type="submit" class="book-btn" id="js-book-btn">Book now</button>
+                    
+                  </form>
+                
+                  <p class="warning-msg" id="js-Warning-msg">
+                      <i class="fa-solid fa-circle-info"></i>
+                      Add the items to the cart to book
+                  </p>
+                
+                  <p class="success-msg" id="js-success-msg">
+                      Thank you for booking the service. We will get back to you soon!
+                  </p>
+                
                 </div>
-    
+
             </div>
-    
         </div>
-    
     </section>
 
-     <!-- ================= QUALITY DESCRIPTION SECTION ================= -->
-
+    <!-- QUALITY DESCRIPTION SECTION -->
     <section id="about" class="quality-section">
-    
+
         <div class="quality-item">
             <i class="fa-solid fa-star"></i>
             <h4>Premium Services</h4>
@@ -296,7 +176,7 @@
                 ensuring garments look and feel as good as new.
             </p>
         </div>
-    
+
         <div class="quality-item">
             <i class="fa-solid fa-headset"></i>
             <h4>Quick Support</h4>
@@ -304,7 +184,7 @@
                 experience is smooth and worry-free
             </p>
         </div>
-    
+
         <div class="quality-item">
             <i class="fa-solid fa-truck-fast"></i>
             <h4>Hassle Free Delivery</h4>
@@ -312,7 +192,7 @@
                 options, tailored to your schedule.
             </p>
         </div>
-    
+
         <div class="quality-item">
             <i class="fa-solid fa-hand-holding-dollar"></i>
             <h4>Affordable Prices</h4>
@@ -322,10 +202,9 @@
         </div>
     </section>
 
-     <!-- ================= NEWSLETTER SUBSCRIPTION SECTION ================= -->
-
+    <!-- NEWSLETTER SUBSCRIPTION SECTION -->
     <section class="newsletter-section">
-    
+
         <h2 class="newsletter-title">Subscribe to our newsletter.</h2>
 
         <div class="newsletter-input">
@@ -334,42 +213,41 @@
 
             <button class="subscribe-btn">Subscribe</button>
         </div>
-    
+
     </section>
 
-     <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer id="contact" class="footer-section">
-    
+
         <div class="footer-container">
-    
+
             <div class="footer-col">
                 <h3>Logo</h3>
-    
+
                 <h4>About Us</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-    
+
             </div>
-    
+
             <div class="footer-col">
                 <h4>Important Links</h4>
                 <ul>
-                    <li><a href= #about>About Us</a></li>
-                    <li><a href= #contact>Contact Us</a></li>
-                    <li><a href= #privacyPolicy>Privacy Policy</a></li>
-                    <li><a href= #termsOfUse>Terms of Use</a></li>
-                    <li><a href= #refundPolicy>Refund Policy</a></li>
+                    <li><a href=#about>About Us</a></li>
+                    <li><a href=#contact>Contact Us</a></li>
+                    <li><a href=#privacyPolicy>Privacy Policy</a></li>
+                    <li><a href=#termsOfUse>Terms of Use</a></li>
+                    <li><a href=#refundPolicy>Refund Policy</a></li>
                 </ul>
-    
+
             </div>
-    
+
             <div class="footer-col">
                 <h4>Contact</h4>
                 <p>laundry@site.com</p>
                 <p>+91 9123456780</p>
-    
+
             </div>
-    
+
             <div class="footer-col">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -380,14 +258,11 @@
                 </div>
             </div>
         </div>
-    
+
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        (function(){
-            emailjs.init("HDjHYp2TEHm8yjPp2");
-        })();
-    </script>
+    
     <script src="js/script.js"></script>
+
 </body>
+
 </html>
